@@ -1,0 +1,116 @@
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes dotPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.6;
+  }
+}
+
+.page-enter {
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.row-animate {
+  opacity: 0;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.slide-left {
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+.slide-right {
+  animation: slideInRight 0.5s ease forwards;
+}
+
+@media (max-width: 768px) {
+  .analyze-grid {
+    flex-direction: column !important;
+  }
+  .deco-panel {
+    display: none !important;
+  }
+  .metrics-row {
+    flex-wrap: wrap !important;
+  }
+  .metrics-row > div {
+    flex: 1 1 45% !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--light-gray) !important;
+  }
+  .score-grid {
+    flex-direction: column !important;
+  }
+  .timeline-card {
+    min-width: 260px !important;
+  }
+  .nav-tabs {
+    gap: 4px !important;
+  }
+  .nav-tab span {
+    display: none;
+  }
+}
